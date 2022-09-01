@@ -1,3 +1,6 @@
+/**
+ * Migrated to redux, this code left here just for example of using React Context API
+ */
 import { createContext, useState, useEffect } from 'react';
 
 import { getCategoriesAndDocuments } from '../utils/firebase/firebase.utils';
@@ -7,13 +10,13 @@ export const CategoriesContext = createContext({
 });
 
 export const CategoriesProvider = ({ children }) => {
-  const [categoriesMap, setCategoriesMap] = useState({});
+  const [categoriesMap, setCategories] = useState({});
 
   useEffect(() => {
     const getCategoriesMap = async () => {
       const categoriesMap = await getCategoriesAndDocuments();
 
-      setCategoriesMap(categoriesMap);
+      setCategories(categoriesMap);
     }
 
     getCategoriesMap();

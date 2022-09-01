@@ -1,3 +1,6 @@
+/**
+ * Migrated to redux, this code left here just for example of using React Context API
+ */
 import { createContext, useReducer } from 'react';
 
 import { createAction } from '../utils/reducer/reducer.utils';
