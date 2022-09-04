@@ -2,9 +2,6 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 
-import {
-  getCurrentUser
-} from './utils/firebase/firebase.utils';
 import { checkUserSession } from './store/user/user.action';
 
 import Home from './routes/home/home.component';
